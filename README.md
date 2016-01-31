@@ -1,2 +1,2 @@
-# MinuteMath
-Math application for Android
+# Software-Engineering
+Software Engineering Group Project
