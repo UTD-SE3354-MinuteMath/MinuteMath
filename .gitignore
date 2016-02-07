@@ -141,6 +141,9 @@ pythontex-files-*/
 # todonotes
 *.tdo
 
+# VIM swap files
+*.sw*
+
 # xindy
 *.xdy
 
