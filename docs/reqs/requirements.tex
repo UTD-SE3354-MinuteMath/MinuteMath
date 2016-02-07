@@ -1,0 +1,64 @@
+\author{}
+\title{SE 3354.002 - Software Engineering1}
+\documentclass[12pt,letterpaper,oneside]{article}
+\usepackage{requirements}
+
+% Metadata
+\usepackage[pdftex,
+	pdftitle={SE 3354.002 Project Requirements},
+	pdfsubject={Software Engineering},
+	pdfproducer={LaTeX with hyperref},
+	pdfcreator={pdflatex}]{hyperref}
+
+% Headers and foots
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{SE 4348.002}
+\chead{Project Requirements}
+\rhead{MinuteMath}
+
+\begin{document}
+%===============================================================================
+\begin{enumerate}
+	\item
+		Game specifications
+	\item
+		% UI Reqs
+		The application shall implement a graphical user interface (UI)
+		\begin{enumerate}
+			\item
+				% Main menu
+				The appplication shall show a main menu on initial launch
+				\begin{enumerate}
+					\item
+						The main menu shall contain buttons to user profile, games, and tutorials
+				\end{enumerate}
+			\item
+				% Tutorial
+				The UI shall contain a tutorial section
+				\begin{enumerate}
+					\item
+						The tutorial screen shall display high level tutorial categories for user to choose from
+					\item
+						% Drop-down
+						The tutorial categories shall display drop-downs of their contained tutorials upon being tapped
+					\item
+						The user shall be taken to the appropriate tutorial upon tapping a contained tutorial
+						\begin{enumerate}
+							\item
+								The tutorial shall be a text-based activity with scrolling
+							\item
+								The user shall be able to navigate back to other menus from the tutorial
+						\end{enumerate}
+				\end{enumerate}
+		\end{enumerate}
+	\item
+		Tutorial
+	\item
+		User profile
+	\item
+		Feedback
+\end{enumerate}
+%===============================================================================
+\end{document}
+

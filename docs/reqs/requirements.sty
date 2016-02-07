@@ -1,0 +1,15 @@
+\ProvidesPackage{requirements}
+%===============================================================================
+\usepackage[letterpaper, margin=1in]{geometry}	% Margins and page size
+\usepackage[english]{babel}	% Set PDF language to English
+\usepackage{fancyhdr}		% For header/footer
+
+\renewcommand{\theenumi}{\textbf{R\arabic{enumi}}}
+\renewcommand{\labelenumi}{\theenumi}
+\renewcommand{\theenumii}{\theenumi\textbf{.\arabic{enumii}}}
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumiii}{\theenumii\textbf{.\arabic{enumiii}}}
+\renewcommand{\labelenumiii}{\theenumiii}
+\renewcommand{\theenumiv}{\theenumiii\textbf{.\arabic{enumiv}}}
+\renewcommand{\labelenumiv}{\theenumiv}
+
