@@ -23,7 +23,7 @@
 %===============================================================================
 \begin{enumerate}
 	\item
-		The application shall contain tutorials to reach various mathematical concepts
+		The application shall contain tutorials to teach various mathematical concepts
 
 	\item	% Games
 		The application shall contain games to reinforce learning of mathematical concepts
@@ -63,10 +63,32 @@
 		\end{enumerate}
 
 	\item	% Feedback
-		The application shall generate feedback for the user as games are played
+		The application shall generate feedback for the user
+		\begin{enumerate}
+			\item	% What data is used?
+				Data regarding the user's performance shall be collected during each game
+				\begin{enumerate}
+					\item	% Number of missed
+						The number of problems answered correctly during a game shall be recorded
+					\item	% Number of correct
+						The number of problems answered incorrectly during a game shall be recorded
+					\item	% Time taken
+						The amount of a user spent in a game shall be recorded
+				\end{enumerate}
+			\item
+				Each game's collected data shall be analyzed
+				\begin{enumerate}
+					\item	% Accuracy
+						The user's accuracy shall be calculated
+					\item	% Speed
+						The user's speed shall be calculated
+				\end{enumerate}
+			\item	% Performance over time
+				The user's performance shall be tracked over time
+		\end{enumerate}
 
 	\item	% User profile
-		The application shall store feedback in user profiles
+		The application shall store feedback in a user profile
 
 	\item	% GUI
 		The application shall implement a graphical user interface (GUI)
