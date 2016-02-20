@@ -1,4 +1,4 @@
-package com.example.sweng.software_engineering;
+package com.github.utd_se3354_minutemath.minutemath;
 
 import org.junit.Test;
 

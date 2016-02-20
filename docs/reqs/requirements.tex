@@ -1,6 +1,8 @@
 \author{}
 \title{SE 3354.003 - Software Engineering1}
 \documentclass[12pt,letterpaper,oneside]{article}
+
+% Loaded packages from ./requirements.sty
 \usepackage{requirements}
 
 % Metadata
@@ -21,28 +23,90 @@
 %===============================================================================
 \begin{enumerate}
 	\item
+		The application shall contain tutorials to teach various mathematical concepts
+
+	\item	% Games
 		The application shall contain games to reinforce learning of mathematical concepts
-	\item
-		% UI Reqs
-		The application shall implement a graphical user interface (UI)
 		\begin{enumerate}
+			\item	% What is a game?
+				A game shall be composed of a series of randomly generated mathematical problems for the user to solve
+				\begin{enumerate}
+					\item % What is a problem?
+						Each problem shall be composed of two operands and an operator
+				\end{enumerate}
+			\item	% Game types
+				The operator used in generating a game's problems shall be selected by the user
+				\begin{enumerate}
+					\item % Types of operands
+						The possible operators shall be addition, subtraction, multiplication and division
+				\end{enumerate}
+			\item	% Number generation
+				The games' operands shall be randomly generated
+			\item	% Options
+				Each game shall have user-configurable parameters
+				\begin{enumerate}
+					\item	% Duration
+						The game duration shall be configurable by the user
+					\item	% Number of questions
+						The number of problems shall be configurable by the user
+					\item	% Number range
+						The range of numbers shall be configurable by the user
+						\begin{enumerate}
+							\item % Addition and subtraction
+								The specified range shall limit the operands when the operator is addition, subtraction or multiplication
+							\item % Multiplication and division
+								The specified range shall limit the dividend when the game type is division
+						\end{enumerate}
+				\end{enumerate}
+			\item	% End game
+				A game shall end when the specified duration or number of questions has been met or if the game is manually ended by the user
+		\end{enumerate}
+
+	\item	% Feedback
+		The application shall generate feedback for the user
+		\begin{enumerate}
+			\item	% What data is used?
+				Data regarding the user's performance shall be collected during each game
+				\begin{enumerate}
+					\item	% Number of missed
+						The number of problems answered correctly during a game shall be recorded
+					\item	% Number of correct
+						The number of problems answered incorrectly during a game shall be recorded
+					\item	% Time taken
+						The amount of a user spent in a game shall be recorded
+				\end{enumerate}
 			\item
-				% Main menu
+				Each game's collected data shall be analyzed
+				\begin{enumerate}
+					\item	% Accuracy
+						The user's accuracy shall be calculated
+					\item	% Speed
+						The user's speed shall be calculated
+				\end{enumerate}
+			\item	% Performance over time
+				The user's performance shall be tracked over time
+		\end{enumerate}
+
+	\item	% User profile
+		The application shall store feedback in a user profile
+
+	\item	% GUI
+		The application shall implement a graphical user interface (GUI)
+		\begin{enumerate}
+			\item	% Main menu
 				The appplication shall show a main menu on initial launch
 				\begin{enumerate}
 					\item
 						The main menu shall contain buttons to user profile, games, and tutorials
 				\end{enumerate}
-			\item
-				% Tutorials
-				The UI shall contain a tutorial section
+			\item	% Tutorials
+				The GUI shall contain a tutorial section
 				\begin{enumerate}
-					\item
+					\item	% Categorized tutorials
 						The tutorial screen shall display high-level tutorial categories for the user to choose from
-					\item
-						% Tutorial drop-downs
+					\item	% Tutorial drop-downs
 						The tutorial categories shall display drop-downs of their contained tutorials upon being tapped
-					\item
+					\item	% Tap to enter
 						The user shall be taken to the appropriate tutorial upon tapping a contained tutorial
 						\begin{enumerate}
 							\item
@@ -52,10 +116,10 @@
 						\end{enumerate}
 				\end{enumerate}
 			\item
-				The UI shall contain games
+				The GUI shall contain a games section
 				\begin{enumerate}
 					\item
-						The UI shall provide a way for the user to select from the application's games
+						The GUI shall provide a game select screen for the user to select from the application's games
 						\begin{enumerate}
 							\item
 								The game select screen shall display categories for the user to chose from
@@ -63,19 +127,19 @@
 								The user shall be taken to the game options screen upon tapping a catagory
 						\end{enumerate}
 					\item
-						The UI shall provide a way for user to configure the game parameters
+						The GUI shall provide a game options screen for user to configure the game parameters
 						\begin{enumerate}
-							\item
+							\item	% Duration
 								The game options screen shall display options for the user to manipulate game time duration
-							\item
+							\item	% Number of questions
 								The game options screen shall display options for the user to specify the number of questions
-							\item
-								The game options screen shall display options for the user to specify whether or not problems will be scored
+							\item	% Scores
+								The game options screen shall display options for the user to specify whether or not scores will be shown during the game
 							\item
 								The user shall be taken to the appropriate game upon tapping a game start button
 						\end{enumerate}
 					\item
-						The UI shall provide a way for the user to play the application's games
+						The GUI shall provide a way for the user to play the application's games
 						\begin{enumerate}
 							\item
 								The in-game screens shall contain a button to end the current game
@@ -83,7 +147,7 @@
 				\end{enumerate}
 			\item
 				% User profile
-				The UI shall contain a section for viewing the user's statistics
+				The GUI shall contain a section for viewing the user's statistics
 				\begin{enumerate}
 					\item
 						The statistics screen shall display high-level statistics categories for the user to view
@@ -95,12 +159,7 @@
 						The information within each category shall be presented graphically
 				\end{enumerate}
 		\end{enumerate}
-	\item
-		Tutorial
-	\item
-		User profile
-	\item
-		Feedback
+
 \end{enumerate}
 %===============================================================================
 \end{document}
