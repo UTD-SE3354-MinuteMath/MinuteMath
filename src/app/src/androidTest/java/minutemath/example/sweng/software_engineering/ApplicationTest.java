@@ -1,4 +1,4 @@
-package com.example.sweng.software_engineering;
+package minutemath.example.sweng.software_engineering;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
