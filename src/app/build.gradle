@@ -5,8 +5,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "com.example.sweng.software_engineering"
-        minSdkVersion 15
+        applicationId "com.github.utd_se3354_minutemath.minutemath"
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
