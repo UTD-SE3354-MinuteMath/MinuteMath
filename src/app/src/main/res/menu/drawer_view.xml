@@ -16,6 +16,7 @@
             android:title="Statistics" />
     </group>
 
+
     <!-- Items pertaining to user interaction -->
     <group
         android:id="@+id/group_user"
