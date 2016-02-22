@@ -18,6 +18,7 @@
 
 package com.github.utd_se3354_minutemath.minutemath;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
@@ -29,57 +30,65 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
-import android.content.Intent;
 
-public class MainActivity extends ActionBarActivity {
+
+public class ProfileActivity extends ActionBarActivity {
 
     private ListView mDrawerList;
     private DrawerLayout mDrawerLayout;
     private ArrayAdapter<String> mAdapter;
     private ActionBarDrawerToggle mDrawerToggle;
     private String mActivityTitle;
+    private String name;
+    private String email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_profile);
 
         mDrawerList = (ListView)findViewById(R.id.navList);mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
         mActivityTitle = getTitle().toString();
 
+        //Build the drawers and setup links
         addDrawerItems();
         setupDrawer();
+        setupListeners();
 
-        final Button button = (Button) findViewById(R.id.buttonProfile);
-        final Intent profileIntent = new Intent(this, ProfileActivity.class);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+    }
+
+    private void setupListeners(){
+        final Button button = (Button) findViewById(R.id.buttonSave);
+        final EditText mEdit   = (EditText)findViewById(R.id.editText);
+        final EditText mEdit2   = (EditText)findViewById(R.id.editText2);
 
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
-                startActivity(profileIntent);
+                name = mEdit.getText().toString();
+                email = mEdit2.getText().toString();
             }
         });
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
     }
 
     private void addDrawerItems() {
         String[] itemArray = {"Main Menu", "Profile", "Games", "Tutorials"};
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, itemArray);
         mDrawerList.setAdapter(mAdapter);
-        final Intent profileIntent = new Intent(this, ProfileActivity.class);
+        final Intent profileIntent = new Intent(this, MainActivity.class);
 
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            //Setup Links to the other activities, if not indicate not implemented
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if(position ==1)
+                if(position ==0)
                     startActivity(profileIntent);
                 else
-                    Toast.makeText(MainActivity.this, "Feature Not yet Available", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ProfileActivity.this, "Feature Not yet Available", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -87,13 +96,11 @@ public class MainActivity extends ActionBarActivity {
     private void setupDrawer() {
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close) {
 
-
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
                 getSupportActionBar().setTitle("App Navigation");
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
             }
-
 
             public void onDrawerClosed(View view) {
                 super.onDrawerClosed(view);
@@ -128,6 +135,7 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement

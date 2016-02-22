@@ -41,17 +41,18 @@
             android:id="@+id/buttonProfile"
             android:layout_marginTop="320dp"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"/>
 
         <ImageView
             android:layout_width="192px"
             android:layout_height="192px"
             android:id="@+id/imageView"
-            android:layout_marginTop="60dp"
             android:contentDescription="App logo"
             android:src="@mipmap/app_logo"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_alignEnd="@+id/buttonTutorials"
+            android:layout_alignStart="@+id/buttonTutorials"
+            android:layout_alignBottom="@+id/buttonTutorials" />
 
     </RelativeLayout>
 
