@@ -80,15 +80,20 @@ public class ProfileActivity extends ActionBarActivity {
         String[] itemArray = {"Main Menu", "Profile", "Games", "Tutorials"};
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, itemArray);
         mDrawerList.setAdapter(mAdapter);
-        final Intent profileIntent = new Intent(this, MainActivity.class);
+        final Intent mainIntent = new Intent(this, MainActivity.class);
+        final Intent tutorialsIntent = new Intent(this, TutorialsActivity.class);
 
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if(position ==0)
-                    startActivity(profileIntent);
+                    startActivity(mainIntent);
+                else if (position ==2)
+                    Toast.makeText(ProfileActivity.this, "Feature Not yet Available", Toast.LENGTH_SHORT).show();
+                else if (position ==3)
+                    startActivity(tutorialsIntent);
                 else
-                Toast.makeText(ProfileActivity.this, "Feature Not yet Available", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ProfileActivity.this, "Already on Profile", Toast.LENGTH_SHORT).show();
             }
         });
     }
