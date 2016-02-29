@@ -100,12 +100,12 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void setupDrawer() {
-        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close) {
+        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.drawer_open, R.string.main_activity) {
 
 
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
-                getSupportActionBar().setTitle("App Navigation");
+                getSupportActionBar().setTitle(R.string.drawer_open);
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
             }
 
