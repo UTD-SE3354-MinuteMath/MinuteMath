@@ -85,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TutorialActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TutorialActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/utd_se3354_minutemath/minutemath/TutorialActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="109" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="172" selection-end-column="1" />
+            <state vertical-scroll-proportion="2.4648187">
+              <caret line="120" column="9" selection-start-line="120" selection-start-column="9" selection-end-line="120" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,11 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TutorialsActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TutorialsActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/utd_se3354_minutemath/minutemath/TutorialsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3987207">
-              <caret line="77" column="49" selection-start-line="77" selection-start-column="49" selection-end-line="77" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -2538,21 +2538,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/utd_se3354_minutemath/minutemath/TutorialActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/utd_se3354_minutemath/minutemath/TutorialsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="109" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="172" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/utd_se3354_minutemath/minutemath/TutorialsActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/utd_se3354_minutemath/minutemath/TutorialActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3987207">
-          <caret line="77" column="49" selection-start-line="77" selection-start-column="49" selection-end-line="77" selection-end-column="49" />
-          <folding />
+        <state vertical-scroll-proportion="2.4648187">
+          <caret line="120" column="9" selection-start-line="120" selection-start-column="9" selection-end-line="120" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
