@@ -94,7 +94,7 @@ public class GameActivity extends ActionBarActivity {
     }
 
     private void setupDrawer() {
-        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close) {
+        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.drawer_open, R.string.game_activity) {
 
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
