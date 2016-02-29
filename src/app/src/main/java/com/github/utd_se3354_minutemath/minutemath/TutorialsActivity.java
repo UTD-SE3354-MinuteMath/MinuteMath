@@ -18,6 +18,7 @@
 
 package com.github.utd_se3354_minutemath.minutemath;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
@@ -29,48 +30,32 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
-import android.content.Intent;
 
-public class MainActivity extends ActionBarActivity {
+
+public class TutorialsActivity extends ActionBarActivity {
 
     private ListView mDrawerList;
     private DrawerLayout mDrawerLayout;
     private ArrayAdapter<String> mAdapter;
     private ActionBarDrawerToggle mDrawerToggle;
     private String mActivityTitle;
+    private String name;
+    private String email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_tutorials);
 
         mDrawerList = (ListView)findViewById(R.id.navList);mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
         mActivityTitle = getTitle().toString();
 
+        //Build the drawers and setup links
         addDrawerItems();
         setupDrawer();
-
-        final Button profileButton = (Button) findViewById(R.id.buttonProfile);
-        final Intent profileIntent = new Intent(this, ProfileActivity.class);
-
-        final Button tutorialsButton = (Button) findViewById(R.id.buttonTutorials);
-        final Intent tutorialsIntent = new Intent(this, TutorialsActivity.class);
-
-        profileButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Perform action on click
-                startActivity(profileIntent);
-            }
-        });
-
-        tutorialsButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Perform action on click
-                startActivity(tutorialsIntent);
-            }
-        });
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
@@ -81,20 +66,19 @@ public class MainActivity extends ActionBarActivity {
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, itemArray);
         mDrawerList.setAdapter(mAdapter);
         final Intent profileIntent = new Intent(this, ProfileActivity.class);
-        final Intent tutorialsIntent = new Intent(this, TutorialsActivity.class);
+        final Intent mainIntent = new Intent(this, MainActivity.class);
 
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            //Setup Links to the other activities, if not indicate not implemented
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if(position ==1)
+                if(position ==0)
+                    startActivity(mainIntent);
+                else if (position ==1)
                     startActivity(profileIntent);
                 else if (position ==2)
-                    Toast.makeText(MainActivity.this, "Feature Not yet Available", Toast.LENGTH_SHORT).show();
-                else if (position ==3)
-                    startActivity(tutorialsIntent);
+                    Toast.makeText(TutorialsActivity.this, "Feature Not yet Available", Toast.LENGTH_SHORT).show();
                 else
-                    Toast.makeText(MainActivity.this, "Already on Main Menu", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TutorialsActivity.this, "Already on Tutorials", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -102,13 +86,11 @@ public class MainActivity extends ActionBarActivity {
     private void setupDrawer() {
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.drawer_open, R.string.drawer_close) {
 
-
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
                 getSupportActionBar().setTitle("App Navigation");
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
             }
-
 
             public void onDrawerClosed(View view) {
                 super.onDrawerClosed(view);
@@ -143,6 +125,7 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement

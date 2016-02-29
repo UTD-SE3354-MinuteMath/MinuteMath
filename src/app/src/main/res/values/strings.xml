@@ -3,4 +3,6 @@
     <string name="drawer_open">MinuteMath</string>
     <string name="drawer_close">MinuteMath</string>
     <string name="profile">Profile</string>
+    <string name="tutorials">Profile</string>
+    <string name="title_activity_tutorials">TutorialsActivity</string>
 </resources>
