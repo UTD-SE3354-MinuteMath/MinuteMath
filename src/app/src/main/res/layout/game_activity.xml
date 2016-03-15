@@ -16,71 +16,75 @@
         tools:context=".GameActivity"
         android:background="#c3d3e1">
 
-        <Button
-            style="?android:attr/buttonStyleSmall"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Submit"
-            android:id="@+id/buttonSave"
-            android:layout_alignParentBottom="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Games"
+            android:id="@+id/textView2"
+            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true" />
 
-        <TextView
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="9 * 6 = "
-            android:id="@+id/textView2"
-            android:layout_marginTop="95dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="9 * 3 = "
-            android:id="@+id/textView3"
+            android:text="Gane 1 Name"
+            android:id="@+id/buttonGame1"
             android:layout_below="@+id/textView2"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="54dp" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/editText5"
-            android:layout_alignBottom="@+id/textView2"
+            android:layout_marginTop="62dp"
             android:layout_alignParentEnd="true" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/editText6"
-            android:layout_alignBottom="@+id/textView3"
-            android:layout_alignStart="@+id/editText5" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="9 * 7 ="
-            android:id="@+id/textView4"
-            android:layout_below="@+id/textView3"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="56dp" />
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Description of Game"
+            android:id="@+id/textGame1Desc"
+            android:layout_below="@+id/buttonGame1"
+            android:layout_alignParentStart="true" />
 
-        <EditText
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/editText7"
-            android:layout_alignBottom="@+id/textView4"
-            android:layout_alignStart="@+id/editText6" />
+            android:text="Game 2 Name"
+            android:id="@+id/button2"
+            android:layout_below="@+id/textGame1Desc"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="38dp"
+            android:layout_alignEnd="@+id/buttonGame1"
+            android:clickable="false"
+            android:enabled="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Description of Game 2"
+            android:id="@+id/textView4"
+            android:layout_below="@+id/button2"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Game 3 Name"
+            android:id="@+id/button3"
+            android:layout_below="@+id/textView4"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="37dp"
+            android:layout_alignEnd="@+id/button2"
+            android:enabled="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Description of Game 3"
+            android:id="@+id/textView5"
+            android:layout_below="@+id/button3"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/button3" />
 
     </RelativeLayout>
 
