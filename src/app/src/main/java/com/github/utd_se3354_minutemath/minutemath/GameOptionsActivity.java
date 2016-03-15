@@ -107,18 +107,22 @@ public class GameOptionsActivity extends ActionBarActivity {
         String[] itemArray = {"Main Menu", "Profile", "Games", "Tutorials"};
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, itemArray);
         mDrawerList.setAdapter(mAdapter);
-        final Intent mainIntent = new Intent(this, MainActivity.class);
         final Intent profileIntent = new Intent(this, ProfileActivity.class);
+        final Intent tutorialsIntent = new Intent(this, TutorialsActivity.class);
+        final Intent gamesIntent = new Intent(this, GameActivity.class);
+        final Intent mainIntent = new Intent(this, MainActivity.class);
 
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if(position ==0)
                     startActivity(mainIntent);
-                else if(position == 1)
+                else if (position ==1)
                     startActivity(profileIntent);
-                else
-                    Toast.makeText(GameOptionsActivity.this, "Feature Not yet Available", Toast.LENGTH_SHORT).show();
+                else if (position ==2)
+                    startActivity(gamesIntent);
+                else if (position ==3)
+                    startActivity(tutorialsIntent);
             }
         });
     }
