@@ -82,19 +82,19 @@ public class MainActivity extends ActionBarActivity {
         mDrawerList.setAdapter(mAdapter);
         final Intent profileIntent = new Intent(this, ProfileActivity.class);
         final Intent tutorialsIntent = new Intent(this, TutorialsActivity.class);
+        final Intent gamesIntent = new Intent(this, GameActivity.class);
 
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            //Setup Links to the other activities, if not indicate not implemented
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if(position ==1)
+                if(position ==0)
+                    Toast.makeText(MainActivity.this, "Already on Profile", Toast.LENGTH_SHORT).show();
+                else if (position ==1)
                     startActivity(profileIntent);
                 else if (position ==2)
-                    Toast.makeText(MainActivity.this, "Feature Not yet Available", Toast.LENGTH_SHORT).show();
+                    startActivity(gamesIntent);
                 else if (position ==3)
                     startActivity(tutorialsIntent);
-                else
-                    Toast.makeText(MainActivity.this, "Already on Main Menu", Toast.LENGTH_SHORT).show();
             }
         });
     }

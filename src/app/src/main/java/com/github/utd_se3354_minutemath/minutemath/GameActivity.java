@@ -99,6 +99,7 @@ public class GameActivity extends ActionBarActivity {
         mDrawerList.setAdapter(mAdapter);
         final Intent mainIntent = new Intent(this, MainActivity.class);
         final Intent profileIntent = new Intent(this, ProfileActivity.class);
+        final Intent tutorialIntent = new Intent(this, TutorialsActivity.class);
 
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -107,6 +108,10 @@ public class GameActivity extends ActionBarActivity {
                     startActivity(mainIntent);
                 else if (position == 1)
                     startActivity(profileIntent);
+                else if (position == 2)
+                    Toast.makeText(GameActivity.this, "You are already on games", Toast.LENGTH_SHORT).show();
+                else if (position == 3)
+                    startActivity(tutorialIntent);
                 else
                     Toast.makeText(GameActivity.this, "Feature Not yet Available", Toast.LENGTH_SHORT).show();
             }

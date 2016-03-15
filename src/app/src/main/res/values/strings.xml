@@ -19,6 +19,7 @@
     <string name="tutorials_activity">Tutorials</string>
 
     <string name="drawer_open">Navigation Drawer</string>
+    <string name="drawer_close">Navigation Drawer</string>
     <string name="nav_main_menu">Main Menu</string>
     <string name="nav_profile">Profile</string>
     <string name="nav_games">Games</string>
